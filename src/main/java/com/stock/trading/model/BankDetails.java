@@ -24,7 +24,7 @@ public class BankDetails {
 	String accountHolderName;
 	
 	@Column(nullable = false)
-	String bankName;
+	String bankNam;
 	
 	@Column(nullable = false)
 	String ifsc;
