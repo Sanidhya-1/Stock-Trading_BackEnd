@@ -76,14 +76,14 @@ public class User {
 		this.phoneNumber = phoneNumber;
 	}
 
-	@OneToOne
-	private WatchList watchList;
+//	@OneToOne
+//	private WatchList watchList;
+//	
+//	@OneToOne
+//	private BankDetails bankDetails;
 	
-	@OneToOne
-	private BankDetails bankDetails;
-	
-	@OneToMany
-	private List<Transactions> trainsaction;
+//	@OneToMany
+//	private List<Transactions> trainsaction;
 
 	public String getId() {
 		return user_Id;
@@ -125,29 +125,29 @@ public class User {
 		this.email = email;
 	}
 
-	public WatchList getWatchList() {
-		return watchList;
-	}
+//	public WatchList getWatchList() {
+//		return watchList;
+//	}
+//
+//	public void setWatchList(WatchList watchList) {
+//		this.watchList = watchList;
+//	}
+//
+//	public BankDetails getBankDetails() {
+//		return bankDetails;
+//	}
+//
+//	public void setBankDetails(BankDetails bankDetails) {
+//		this.bankDetails = bankDetails;
+//	}
+//
+//	public List<Transactions> getTrainsaction() {
+//		return trainsaction;
+//	}
 
-	public void setWatchList(WatchList watchList) {
-		this.watchList = watchList;
-	}
-
-	public BankDetails getBankDetails() {
-		return bankDetails;
-	}
-
-	public void setBankDetails(BankDetails bankDetails) {
-		this.bankDetails = bankDetails;
-	}
-
-	public List<Transactions> getTrainsaction() {
-		return trainsaction;
-	}
-
-	public void setTrainsaction(List<Transactions> trainsaction) {
-		this.trainsaction = trainsaction;
-	}
+//	public void setTrainsaction(List<Transactions> trainsaction) {
+//		this.trainsaction = trainsaction;
+//	}
 	
 	
 	
