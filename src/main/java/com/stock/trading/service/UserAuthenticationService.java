@@ -21,5 +21,11 @@ public class UserAuthenticationService {
 		
 	}
 	
+	public boolean checkIfRegistered(User user) {
+		
+		int result = this.userAuthenticationDao.checkIfUserExist(user.getEmail());
+		return result == 1 ? true : false;
+	}
+	
 	
 }
