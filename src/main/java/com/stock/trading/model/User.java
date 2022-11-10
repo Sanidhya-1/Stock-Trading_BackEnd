@@ -16,7 +16,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 
 @Entity
-@Table(name = "user")
+@Table(name = "user_table")
 public class User {
 	
 	public User() {
@@ -25,39 +25,35 @@ public class User {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	String user_Id;
+	private long user_Id;
 	
-	@Column
-	@NotEmpty
-	String firstName;
+	@Column(name="firstName")
+	private String firstName;
 	
-	@Column
-	String middleName;
+	@Column(name="middleName")
+	private String middleName;
 	
-	@Column
-	@NotEmpty
-	String lastName;
+	@Column(name="lastName")
+	private String lastName;
 	
-	@Column(unique = true,nullable = false)
-	@Email
-	@NotEmpty
-	String email;
+	@Column(name="email")
+	private String email;
 	
-	@Column(nullable = false)
-	boolean verified;
+	@Column(name="verified")
+	private boolean verified;
 	
-	@Column(nullable = false)
-	String phoneNumber;
+	@Column(name="phoneNumber")
+	private String phoneNumber;
 	
-	@Column(nullable = false)
-	String password;
+	@Column(name="pass_word")
+	private String pass_word;
 	
 	public String getPassword() {
-		return password;
+		return pass_word;
 	}
 
 	public void setPassword(String password) {
-		this.password = password;
+		this.pass_word = password;
 	}
 
 	public boolean isVerified() {
@@ -85,11 +81,11 @@ public class User {
 //	@OneToMany
 //	private List<Transactions> trainsaction;
 
-	public String getId() {
+	public long getId() {
 		return user_Id;
 	}
 
-	public void setId(String id) {
+	public void setId(long id) {
 		this.user_Id = id;
 	}
 
